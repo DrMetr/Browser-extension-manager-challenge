@@ -1,0 +1,18 @@
+:root { 
+    --Black: hsl(227,75%,14%);
+    --Neutral800: hsl(226,25%,17%);
+    --Neutral700: hsl(225,23%,24%);
+    --Neutral600: hsl(226,11%,37%);
+    --Neutral300: hsl(0,0%,78%);
+    --Neutral200: hsl(217,61%,90%);
+    --Neutral100: hsl(0,0%,93%);
+    --White: hsl(200,60%,99%);
+    --Pink: hsl(3,86%,64%);
+    --Brick: hsl(3,71%,56%);
+    --Red: hsl(3,77%,44%);
+    }
+
+html {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+}
