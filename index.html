@@ -19,17 +19,21 @@
   </style>
 </head>
 <body>
+  <img src="assets/images/logo.svg" alt="Extensions logo">
 <main>
-  <p>Extensions List</p>
-
-  All
-  Active
-  Inactive
-
-
-  <div class="extensions">
+  <div class="upper_bar grey_background"></div>
+  <h1>Extensions List</h1>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand is-flex-direction-row ">
+  <button class="navbar-end light_grey_background">All</button>
+  <button class="navbar-item light_grey_background">Active</button>
+  <button class="navbar-end light_grey_background">Inactive</button>
   </div>
-  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+</nav>
+
+  <div class="extensions_list">
+  </div>
+  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below 
 
   DevLens
   Quickly inspect page layouts and visualize element boundaries.
@@ -77,7 +81,8 @@
 
   ConsolePlus
   Enhanced developer console with advanced filtering and logging.
-  Remove
+  Remove -->
+
 </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 

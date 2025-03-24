@@ -15,4 +15,43 @@
 html {
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
+    background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+.light_grey_background {
+    background-color: var(--Neutral700);
+}
+
+.grey_background {
+    background-color: var(--Neutral800);
+}
+
+.switch {
+    height: 20px;
+    width: 45px;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: var(--Red);
+}
+
+.inactive {
+    background-color: var(--Neutral300);
+}
+
+.switch_button {
+    background-color: var(--Neutral100);
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+}
+
+.remove_button {
+    border: 2px solid var(--Neutral300);
+    border-radius: 25px;
+    padding: 8px;
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--Neutral100)
 }
