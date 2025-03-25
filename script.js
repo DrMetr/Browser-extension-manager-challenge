@@ -3,6 +3,8 @@ const allButton = document.querySelector(".all_btn");
 const activeButton = document.querySelector(".active_btn");
 const inactiveButton = document.querySelector(".inactive_btn");
 
+const sortButtons = [allButton, activeButton, inactiveButton];
+
 let extensions = [];
 
 fetch("data.json")
@@ -71,10 +73,13 @@ function placeStuff(data){
   })
 }
 
-allButton.addEventListener("click", (event) => {
+sortButtons.forEach(btn => {
+  btn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  if (allButton.classList.contains("inactive")){
-    allButton.classList.replace("inactive", "active");
+  if (btn.classList.contains("inactive")){
+    btn.classList.replace("inactive", "active");
+    
   }
+})
 })
