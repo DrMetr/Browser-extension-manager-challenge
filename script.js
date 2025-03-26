@@ -29,9 +29,9 @@ function placeStuff(data){
   data.forEach(item => {
 
     if (item.isActive == true) {
-      html += `<div class="extension box shown ext_active is-flex is-flex-direction-column grey_background">`;
+      html += `<div class="extension cell box shown ext_active is-flex is-flex-direction-column">`;
     } else {
-      html += `<div class="extension box shown ext_inactive is-flex is-flex-direction-column grey_background">`;
+      html += `<div class="extension cell box shown ext_inactive is-flex is-flex-direction-column">`;
     }
 
     html += `<div class="info is-flex is-flex-direction-row mb-6">
@@ -93,8 +93,8 @@ function placeStuff(data){
 sortButtons.forEach(btn => {
   btn.addEventListener("click", (event) => {
     event.preventDefault();
-    sortButtons.forEach(item => item.classList.add("inactive"));
-    btn.classList.replace("inactive", "active");
+    sortButtons.forEach(item => item.classList.add("inactive_sort"));
+    btn.classList.replace("inactive_sort", "active_sort");
 
     if(btn == activeButton){
       document.querySelectorAll(".ext_inactive")
@@ -114,17 +114,21 @@ sortButtons.forEach(btn => {
 
 themeButton.addEventListener("click", event => {
   event.preventDefault();
-  if(document.querySelector("body").classList.contains("dark")){
-    document.querySelector("body").classList.replace("dark", "light")
-    document.querySelector(".logo_title_masker").style.display = "none";
-    document.querySelectorAll(".on").forEach(item => item.style.border = "1px solid var(--Red)");
-    document.querySelectorAll(".active").forEach(item => item.style.backgroundColor = "var(--Red)");
-    document.querySelectorAll(".off").forEach(item => item.style.border = "1px solid var(--Neutral200)");
-    document.querySelectorAll(".inactive").forEach(item => item.style.backgroundColor = "var(--Neutral200)");
-  } else if (document.querySelector("body").classList.contains("light")) {
-    document.querySelector("body").classList.replace("light", "dark");
-    document.querySelector(".logo_title_masker").style.display = "inline";
-    document.querySelectorAll(".on").forEach(item => item.style.border = "1px solid var(--Pink)");
-    document.querySelectorAll(".active").forEach(item => item.style.backgroundColor = "var(--Pink)");
+
+  let theme = document.documentElement.getAttribute("data-theme");
+  document.documentElement.setAttribute("data-theme",
+    theme === "dark" ? "light":"dark"
+  );
+
+  let icon = document.querySelector("#theme_icon").getAttribute("src");
+  document.querySelector("#theme_icon").setAttribute("src",
+    icon === "assets/images/icon-sun.svg" ? "assets/images/icon-moon.svg":"assets/images/icon-sun.svg"
+  );
+
+  let mask = document.querySelector(".logo_title_masker");
+  if (theme == "dark"){
+    mask = "visible";
+  } else {
+    mask = "invisible";
   }
 })
