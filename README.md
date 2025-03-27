@@ -29,12 +29,12 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
-![Screenshot dark mode](image.png)
+![Screenshot dark mode](image-2.png)
 ![Screenshot light mode](image-1.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/browser-extension-manager-bulma-QrmG4tAvmJ)
 - Live Site URL: [Live site](https://github.com/DrMetr/Browser-extension-manager-challenge)
 
 ## My process
