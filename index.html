@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -29,22 +29,18 @@
     </div>
     
     <div class="theme_button is-flex" role="button" aria-label="Change to light theme">
-      <picture>
-        <source srcset="assets/images/icon-moon.svg" media="(prefers-color-scheme: dark)">
-        <source srcset="assets/images/icon-sun.svg" media="(prefers-color-scheme: light)">
-        <img src="assets/images/icon-sun.svg" alt="Change to Light theme">
-      </picture>
+      <img src="assets/images/icon-sun.svg" alt="Change to Light theme" id="theme_icon">
     </div>
   </div>
 
   <main class="is-flex is-flex-direction-column is-align-items-center">
     <h1 class="list_title mb-3">Extensions List</h1>
     
-    <nav class="is-flex is-flex-direction-row is-align-items-center mb-3" 
+    <nav class=" is-flex is-flex-direction-row is-align-items-center mb-3" 
       role="navigation" aria-label="main navigation">
-      <button class="light_grey_background pill active all_btn">All</button>
-      <button class="light_grey_background pill active_btn">Active</button>
-      <button class="light_grey_background pill inactive_btn">Inactive</button>
+      <button class="pill active all_btn">All</button>
+      <button class="pill active_btn">Active</button>
+      <button class="pill inactive_btn">Inactive</button>
     </nav>
 
     <div class="extensions_list">

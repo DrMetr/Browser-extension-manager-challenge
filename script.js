@@ -29,9 +29,9 @@ function placeStuff(data){
   data.forEach(item => {
 
     if (item.isActive == true) {
-      html += `<div class="extension cell box shown ext_active is-flex is-flex-direction-column">`;
+      html += `<div class="extension cell box shown ext_active">`;
     } else {
-      html += `<div class="extension cell box shown ext_inactive is-flex is-flex-direction-column">`;
+      html += `<div class="extension cell box shown ext_inactive">`;
     }
 
     html += `<div class="info is-flex is-flex-direction-row mb-6">
